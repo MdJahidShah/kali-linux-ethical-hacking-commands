@@ -1,4 +1,4 @@
-# 🔍 GREP — BASIC THEORY (Put this at the TOP of `grep-command.md`)
+# 🔍 GREP — BASIC THEORY
 
 ## What is `grep`?
 

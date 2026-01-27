@@ -1,7 +1,5 @@
 # 🔁 FIND vs GREP — DEEP COMPARISON
 
-*(Create a section in `grep-command.md` or a separate `find-vs-grep.md`)*
-
 ## Conceptual Difference (First Principles)
 
 | Tool   | Primary Purpose                |

@@ -1,4 +1,4 @@
-# 🔐 `permissions.md`
+# 🔐 Permissions
 
 ## Linux File Permissions & Ownership (Security-Critical)
 

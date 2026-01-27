@@ -1,7 +1,5 @@
 # ⚡ RIPGREP (`rg`) — MODERN GREP ALTERNATIVE
 
-*(Add this as a section in `grep-command.md` or new `ripgrep.md`)*
-
 ## What is ripgrep?
 
 `ripgrep` (`rg`) is a **modern, faster replacement for grep**, written in Rust.
