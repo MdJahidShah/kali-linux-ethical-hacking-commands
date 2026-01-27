@@ -194,4 +194,6 @@ If you keep this standard across commands, your repo will look **top-tier**.
 * `ripgrep (rg)` modern alternative section
 * A **Linux-for-pentesters** mini handbook
 
+---
+
 [Return Home](https://github.com/MdJahidShah/kali-linux-ethical-hacking-commands?tab=readme-ov-file#kali-linux-ethical-hacking-command-structure)

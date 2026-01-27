@@ -44,7 +44,8 @@ Permission format:
 | `chown user file`  | Change owner     | Updates UID             | Ownership abuse         |
 | `chgrp group file` | Change group     | Updates GID             | Group escalation        |
 | `ls -l`            | View permissions | Reads inode metadata    | First audit step        |
-
+| `chmod 777 file`   | Change permissions| Modifies access bits  | Dangerous in prod       |
+| `id`               | User info        | Shows UID/GID           | Detect privileges       |
 ---
 
 ## Numeric Permission Meaning

@@ -126,33 +126,4 @@ echo $PATH
 
 ---
 
-## Recommended Placement (Final)
-
-```
-01-linux-basics/
-├── file-system.md
-├── permissions.md
-├── grep-command.md      👈 theory + grep + rg + comparison
-├── find-vs-grep.md      (optional split)
-└── linux-for-pentesters.md
-```
-
----
-
-## Senior Reviewer Verdict
-
-With these additions:
-
-* Your `grep` section becomes **authoritative**
-* Your repo shifts from *commands* → *thinking*
-* This now looks like a **real training reference**, not notes
-
-### Next logical upgrades:
-
-* `process-management.md`
-* `log-analysis.md`
-* `privilege-escalation-basics.md`
-
-Say which one you want next — we’ll keep the quality uncompromising.
-
----
+[Return Home](https://github.com/MdJahidShah/kali-linux-ethical-hacking-commands?tab=readme-ov-file#kali-linux-ethical-hacking-command-structure)
