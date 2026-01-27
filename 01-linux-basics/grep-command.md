@@ -49,9 +49,9 @@ This exit-code behavior makes `grep` ideal for **automation, scripts, and securi
 
 ---
 
-# ✅ COMPLETE `grep` COMMAND REFERENCE (GitHub-Ready)
+## ✅ COMPLETE `grep` COMMAND REFERENCE (GitHub-Ready)
 
-## 📌 Basic Grep Usage
+### 📌 Basic Grep Usage
 
 | Command                   | Purpose             | How it works                 | Real Use Case            |
 | ------------------------- | ------------------- | ---------------------------- | ------------------------ |
@@ -63,7 +63,7 @@ This exit-code behavior makes `grep` ideal for **automation, scripts, and securi
 
 ---
 
-## 📌 Recursive & Directory Searches
+### 📌 Recursive & Directory Searches
 
 | Command                | Purpose             | How it works             | Pentester Tip               |
 | ---------------------- | ------------------- | ------------------------ | --------------------------- |
@@ -74,7 +74,7 @@ This exit-code behavior makes `grep` ideal for **automation, scripts, and securi
 
 ---
 
-## 📌 Regular Expression Power
+### 📌 Regular Expression Power
 
 | Command             | Purpose          | How it works           | Pentester Use           |                  |
 | ------------------- | ---------------- | ---------------------- | ----------------------- | ---------------- |
@@ -86,7 +86,7 @@ This exit-code behavior makes `grep` ideal for **automation, scripts, and securi
 
 ---
 
-## 📌 Grep with Pipes (Critical Skill)
+### 📌 Grep with Pipes (Critical Skill)
 
 | Command         | Purpose      | How it works     | Real Scenario       |                    |
 | --------------- | ------------ | ---------------- | ------------------- | ------------------ |
@@ -97,7 +97,7 @@ This exit-code behavior makes `grep` ideal for **automation, scripts, and securi
 
 ---
 
-## 📌 Log Analysis (High Value)
+### 📌 Log Analysis (High Value)
 
 | Command                  | Purpose             | Pentester Value       |
 | ------------------------ | ------------------- | --------------------- |
@@ -109,7 +109,7 @@ This exit-code behavior makes `grep` ideal for **automation, scripts, and securi
 
 ---
 
-## 📌 Binary & Special Files
+### 📌 Binary & Special Files
 
 | Command                   | Purpose           | When to Use      |
 | ------------------------- | ----------------- | ---------------- |
@@ -119,7 +119,7 @@ This exit-code behavior makes `grep` ideal for **automation, scripts, and securi
 
 ---
 
-## 📌 File Type & Size Control
+### 📌 File Type & Size Control
 
 | Command                              | Purpose          | Why Important |
 | ------------------------------------ | ---------------- | ------------- |
@@ -129,7 +129,7 @@ This exit-code behavior makes `grep` ideal for **automation, scripts, and securi
 
 ---
 
-## 📌 Security / Ethical Hacking Use Cases
+### 📌 Security / Ethical Hacking Use Cases
 
 | Scenario            | Command                     |
 | ------------------- | --------------------------- |
@@ -142,7 +142,7 @@ This exit-code behavior makes `grep` ideal for **automation, scripts, and securi
 
 ---
 
-## 📌 Common Mistakes (Add This Section)
+### 📌 Common Mistakes (Add This Section)
 
 | Mistake               | Fix                   |
 | --------------------- | --------------------- |
@@ -153,7 +153,7 @@ This exit-code behavior makes `grep` ideal for **automation, scripts, and securi
 
 ---
 
-## 🧠 Pro Pentester Tips (Worth Gold)
+### 🧠 Pro Pentester Tips (Worth Gold)
 
 * Always combine with `less`:
 
@@ -167,7 +167,7 @@ grep -R "secret" . | less
 
 ---
 
-### Why Grep?
+## Why Grep?
 
 * `grep` is a **Linux core skill**, not a tool
 * Used in **every phase** (recon → post-exploit)
@@ -175,7 +175,7 @@ grep -R "secret" . | less
 
 ---
 
-### 🔁 Cross-reference it in:
+## 🔁 Cross-reference it in:
 
 * Recon section (OSINT filtering)
 * Web testing (config search)

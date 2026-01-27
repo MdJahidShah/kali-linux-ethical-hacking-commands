@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="UTxFHuoUYF8hWnwcz9oTUnR67fvD3Xpyu_o_zoDhXNQ" />
+    <meta name="description" content="Linux file editing commands for ethical hackers using Kali Linux. Learn nano, vim, and file manipulation commands with practical examples.">
+    <meta name="keywords" content="Linux commands, file editing, ethical hacking, Kali Linux, nano editor, vim editor, penetration testing, file manipulation">
+    <meta name="author" content="Md Jahid Shah">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Linux File Editing Commands - Kali Linux Ethical Hacking">
+    <meta property="og:description" content="Learn file editing commands and techniques in Kali Linux for penetration testing and ethical hacking.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mdjahidshah.github.io/kali-linux-ethical-hacking-commands/docs/file-editing.html">
+    <meta property="og:image" content="https://jahidshah.sscholarscenter.com/profile-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Linux File Editing Commands - Kali Linux Ethical Hacking">
+    <meta name="twitter:description" content="Learn file editing commands and techniques in Kali Linux for penetration testing and ethical hacking.">
+    <meta name="twitter:image" content="https://jahidshah.sscholarscenter.com/profile-image.jpg">
+    <link rel="icon" type="image/x-icon" href="https://mdjahidshah.github.io/Images/Md_Jahid_Shah.png">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Linux File Editing Commands - Kali Linux Ethical Hacking</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">🏠 Home</a> |
+            <a href="grep-command.html">Grep Command</a> |
+            <a href="nmap.html">Nmap Basics</a> |
+            <a href="reconnaissance.html">Reconnaissance</a>
+        </nav>
+        <h1>Linux File Editing Commands</h1>
+        <p>Practical file editing in Kali Linux for ethical hackers and penetration testers.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>1. Nano Editor</h2>
+            <p>Nano is a beginner-friendly command-line text editor.</p>
+            <ul>
+                <li><code>nano filename.txt</code> - Open or create a file.</li>
+                <li>Use <kbd>Ctrl + O</kbd> to save and <kbd>Ctrl + X</kbd> to exit.</li>
+                <li>Tip: Always check permissions before editing critical files.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>2. Vim Editor</h2>
+            <p>Vim is a powerful editor for advanced users.</p>
+            <ul>
+                <li><code>vim filename.txt</code> - Open a file.</li>
+                <li>Switch to insert mode: <kbd>i</kbd>, save & exit: <kbd>Esc :wq</kbd></li>
+                <li>Tip: Learn basic navigation: <kbd>h</kbd>, <kbd>j</kbd>, <kbd>k</kbd>, <kbd>l</kbd>.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>3. Other Useful File Commands</h2>
+            <ul>
+                <li><code>cat file.txt</code> - Display file content.</li>
+                <li><code>less file.txt</code> - Scroll through a file page by page.</li>
+                <li><code>touch newfile.txt</code> - Create an empty file.</li>
+                <li><code>cp source.txt dest.txt</code> - Copy files.</li>
+                <li><code>mv oldname.txt newname.txt</code> - Move or rename files.</li>
+                <li><code>rm file.txt</code> - Remove files (be careful!).</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>4. Pentester Tips</h2>
+            <ul>
+                <li>Always make backups of important configuration files before editing.</li>
+                <li>Use <code>ls -la</code> to check hidden files before modifying anything.</li>
+                <li>Check file permissions with <code>stat file.txt</code> before writing changes.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Md Jahid Shah | <a href="../index.html">Back to Home</a></p>
+    </footer>
+</body>
+</html>
