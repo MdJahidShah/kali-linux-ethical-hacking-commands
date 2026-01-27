@@ -9,7 +9,11 @@ All commands are documented with clear explanations and safe example usage, focu
 
 **kali-ethical-hacking-commands/**
 * ├── [01-basics](https://github.com/MdJahidShah/kali-linux-ethical-hacking-commands/01-linux-basics/)
-* * [File System]()
+* * [File System](https://github.com/MdJahidShah/kali-linux-ethical-hacking-commands/blob/main/01-linux-basics/file-system.md#linux-file-system-basics-for-ethical-hackers)
+* * [Permissions](https://github.com/MdJahidShah/kali-linux-ethical-hacking-commands/blob/main/01-linux-basics/permissions.md#linux-file-system-basics-for-ethical-hackers)
+* * [Grep Command](https://github.com/MdJahidShah/kali-linux-ethical-hacking-commands/blob/main/01-linux-basics/grep-command.md#linux-file-system-basics-for-ethical-hackers)
+* * [Find vs Grep](https://github.com/MdJahidShah/kali-linux-ethical-hacking-commands/blob/main/01-linux-basics/find-vs-grep.md#linux-file-system-basics-for-ethical-hackers)
+* * [Linux for Pentesters](https://github.com/MdJahidShah/kali-linux-ethical-hacking-commands/blob/main/01-linux-basics/linux-for-pentesters.md#linux-file-system-basics-for-ethical-hackers)
 * ├── [02-networking](https://github.com/MdJahidShah/kali-linux-ethical-hacking-commands?tab=readme-ov-file#2-network-fundamentals)
 * ├── [03-reconnaissance](https://github.com/MdJahidShah/kali-linux-ethical-hacking-commands?tab=readme-ov-file#3-information-gathering-reconnaissance)
 * ├── [04-scanning](https://github.com/MdJahidShah/kali-linux-ethical-hacking-commands?tab=readme-ov-file#4-scanning--enumeration)
