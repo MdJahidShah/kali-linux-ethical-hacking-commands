@@ -1,4 +1,4 @@
-# kali-linux-ethical-hacking-commands
+# Kali Linux Ethical Hacking Commands
 This repository is a structured and practical reference of Kali Linux commands and tools used in ethical hacking and penetration testing. It is designed to help cybersecurity learners, bug bounty hunters, and penetration testers understand what each command does, how it works internally, and where it fits in the real-world hacking methodology.
 
 The repository covers core areas such as information gathering (OSINT), network scanning, enumeration, web application security testing, password auditing, wireless security testing, exploitation frameworks, and post-exploitation analysis using Kali Linux.
