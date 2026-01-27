@@ -6,18 +6,19 @@ The repository covers core areas such as information gathering (OSINT), network 
 All commands are documented with clear explanations and safe example usage, focusing on authorized security testing, learning, and professional penetration testing workflows.
 
 ## Kali Linux Ethical Hacking Command Structure
-kali-ethical-hacking-commands/
-│
-├── [01-basics]()
-├── [02-networking]()
-├── [03-reconnaissance]()
-├── [04-scanning]()
-├── [05-web-testing]()
-├── [06-passwords]()
-├── [07-wireless]()
-├── [08-exploitation]()
-├── [09-post-exploitation]()
-└── [10-reporting]()
+
+**kali-ethical-hacking-commands/**
+* │
+* ├── [01-basics]()
+* ├── [02-networking]()
+* ├── [03-reconnaissance]()
+* ├── [04-scanning]()
+* ├── [05-web-testing]()
+* ├── [06-passwords]()
+* ├── [07-wireless]()
+* ├── [08-exploitation]()
+* ├── [09-post-exploitation]()
+* └── [10-reporting]()
 
 Let’s pressure-test the request first.
 
