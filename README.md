@@ -8,17 +8,16 @@ All commands are documented with clear explanations and safe example usage, focu
 ## Kali Linux Ethical Hacking Command Structure
 
 **kali-ethical-hacking-commands/**
-* │
-* ├── [01-basics]()
-* ├── [02-networking]()
-* ├── [03-reconnaissance]()
-* ├── [04-scanning]()
-* ├── [05-web-testing]()
-* ├── [06-passwords]()
-* ├── [07-wireless]()
-* ├── [08-exploitation]()
-* ├── [09-post-exploitation]()
-* └── [10-reporting]()
+* ├── [01-basics](https://github.com/MdJahidShah/kali-linux-ethical-hacking-commands?tab=readme-ov-file#1-system--environment-basics)
+* ├── [02-networking](https://github.com/MdJahidShah/kali-linux-ethical-hacking-commands?tab=readme-ov-file#2-network-fundamentals)
+* ├── [03-reconnaissance](https://github.com/MdJahidShah/kali-linux-ethical-hacking-commands?tab=readme-ov-file#3-information-gathering-reconnaissance)
+* ├── [04-scanning](https://github.com/MdJahidShah/kali-linux-ethical-hacking-commands?tab=readme-ov-file#4-scanning--enumeration)
+* ├── [05-web-testing](https://github.com/MdJahidShah/kali-linux-ethical-hacking-commands?tab=readme-ov-file#5-web-application-testing)
+* ├── [06-passwords](https://github.com/MdJahidShah/kali-linux-ethical-hacking-commands?tab=readme-ov-file#6-password--authentication-testing)
+* ├── [07-wireless](https://github.com/MdJahidShah/kali-linux-ethical-hacking-commands?tab=readme-ov-file#7-wireless-security-authorized-only)
+* ├── [08-exploitation](https://github.com/MdJahidShah/kali-linux-ethical-hacking-commands?tab=readme-ov-file#8-exploitation-frameworks)
+* ├── [09-post-exploitation](https://github.com/MdJahidShah/kali-linux-ethical-hacking-commands?tab=readme-ov-file#9-post-exploitation-high-level)
+* └── [10-reporting](https://github.com/MdJahidShah/kali-linux-ethical-hacking-commands?tab=readme-ov-file#10-reporting--evidence)
 
 Let’s pressure-test the request first.
 
