@@ -196,4 +196,4 @@ If you keep this standard across commands, your repo will look **top-tier**.
 
 ---
 
-[Return Home](https://github.com/MdJahidShah/kali-linux-ethical-hacking-commands?tab=readme-ov-file#kali-linux-ethical-hacking-command-structure)
+[Return Home](https://mdjahidshah.github.io/kali-linux-ethical-hacking-commands/)

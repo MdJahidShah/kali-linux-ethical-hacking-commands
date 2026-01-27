@@ -217,4 +217,4 @@ Unauthorized scanning is illegal.
 
 ---
 
-[⬅ Return Home](../README.md)
+[⬅ Return Home](https://mdjahidshah.github.io/kali-linux-ethical-hacking-commands/)
