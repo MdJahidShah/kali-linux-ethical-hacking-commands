@@ -13,6 +13,25 @@ Credentials, tokens, API keys, and configs are stored in plain text.
 | `vim file` | Edit file | Modal editor | Power users |
 | `tail -f log` | Live log view | Streams appended data | Monitor attacks |
 
+### "cat" Example:
+- To show users
+`
+┌──(jahid㉿root)-[/]
+└─$ cat etc/passwd
+root:x:0:0:root:/root:/bin/bash
+................................
+................................
+jahid:x:1000:1000::/home/jahid:/usr/bin/zsh
+`
+- To check user password
+- cat www/shadow (To check user Password)
+`
+┌──(jahid㉿root)-[/]
+└─$ sudo cat etc/shadow
+................................
+................................
+jahid:$y$j9T$Zd3O5aADQ4sHFK1IdohLOAVD:20475:0:99999:7:::
+`
 ---
 
 [Return Home](https://mdjahidshah.github.io/kali-linux-ethical-hacking-commands/)
