@@ -13,9 +13,9 @@ Credentials, tokens, API keys, and configs are stored in plain text.
 | `vim file` | Edit file | Modal editor | Power users |
 | `tail -f log` | Live log view | Streams appended data | Monitor attacks |
 
-### `cat` Command Example
+### => `cat` Command Example
 
-#### Show system users
+#### -> Show system users
 ```bash
 ┌──(jahid㉿root)-[/]
 └─$ cat /etc/passwd
@@ -23,7 +23,7 @@ root:x:0:0:root:/root:/bin/bash
 ...
 jahid:x:1000:1000::/home/jahid:/usr/bin/zsh
 ```
-#### Check password hashes (root only)
+#### -> Check password hashes (root only)
 ```bash
 ┌──(jahid㉿root)-[/]
 └─$ sudo cat /etc/shadow

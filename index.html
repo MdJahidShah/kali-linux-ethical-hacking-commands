@@ -60,147 +60,158 @@
         </script>
     </head>
 
-<body>
+<body>  
+    
+    <div class="container">
 
-<div class="container">
+        <header>
+            <nav>
+                <a href="https://mdjahidshah.github.io/kali-linux-ethical-hacking-commands/">🏠 Home</a> |
+                <a href="https://github.com/mdjahidshah/kali-linux-ethical-hacking-commands/01-linux-basics/grep-command.md">Grep Command</a> |
+                <a href="https://github.com/mdjahidshah/kali-linux-ethical-hacking-commands/nmap-port-scanning-basics-for-ethical-hackers.md">Nmap Basics</a> |
+                <a href="https://github.com/mdjahidshah/kali-linux-ethical-hacking-commands/reconnaissance.html">Reconnaissance</a>
+            </nav>
+            <h1>Kali Linux Ethical Hacking Commands</h1>
+            <p class="subtitle">
+                A structured and practical reference of Kali Linux commands and tools used in ethical hacking and penetration testing.
+            </p>
+        </header>
 
-    <header>
-        <h1>Kali Linux Ethical Hacking Commands</h1>
-        <p class="subtitle">
-            A structured and practical reference of Kali Linux commands and tools used in ethical hacking and penetration testing.
-        </p>
-    </header>
+        <section class="intro">
+            <p>
+                This repository is designed to help cybersecurity learners, bug bounty hunters,
+                and penetration testers understand what each command does, how it works internally,
+                and where it fits in real-world hacking methodologies.
+            </p>
 
-    <section class="intro">
-        <p>
-            This repository is designed to help cybersecurity learners, bug bounty hunters,
-            and penetration testers understand what each command does, how it works internally,
-            and where it fits in real-world hacking methodologies.
-        </p>
+            <p>
+                The repository covers information gathering (OSINT), network scanning, enumeration,
+                web application testing, password auditing, wireless security, exploitation,
+                and post-exploitation analysis using Kali Linux.
+            </p>
 
-        <p>
-            The repository covers information gathering (OSINT), network scanning, enumeration,
-            web application testing, password auditing, wireless security, exploitation,
-            and post-exploitation analysis using Kali Linux.
-        </p>
+            <p>
+                All examples focus strictly on <strong>authorized security testing</strong>,
+                professional workflows, and ethical learning practices.
+            </p>
+        </section>
 
-        <p>
-            All examples focus strictly on <strong>authorized security testing</strong>,
-            professional workflows, and ethical learning practices.
-        </p>
-    </section>
+        <section>
+            <h2>Kali Linux Ethical Hacking Command Structure</h2>
 
-    <section>
-        <h2>Kali Linux Ethical Hacking Command Structure</h2>
+            <ul class="repo-links">
+                <li>
+                    <strong>01-Basics</strong>
+                    <ul>
+                        <li>
+                            <a href="https://github.com/MdJahidShah/kali-linux-ethical-hacking-commands/blob/main/01-linux-basics/file-system.md#linux-file-system-basics-for-ethical-hackers" target="_blank">
+                                File System
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/MdJahidShah/kali-linux-ethical-hacking-commands/blob/main/01-linux-basics/permissions.md#linux-file-permissions--ownership-security-critical" target="_blank">
+                                Permissions
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/MdJahidShah/kali-linux-ethical-hacking-commands/blob/main/01-linux-basics/grep-command.md#-grep--basic-theory-put-this-at-the-top-of-grep-commandmd" target="_blank">
+                                Grep Command
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/MdJahidShah/kali-linux-ethical-hacking-commands/blob/main/01-linux-basics/find-vs-grep.md#-find-vs-grep--deep-comparison" target="_blank">
+                                Find vs Grep
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/MdJahidShah/kali-linux-ethical-hacking-commands/blob/main/01-linux-basics/ripgrep.md#-ripgrep-rg--modern-grep-alternative" target="_blank">
+                                Ripgrep (rg)
+                            </a>
+                        </li>
+                    </ul>
+                </li>
 
-        <ul class="repo-links">
-            <li>
-                <strong>01-Basics</strong>
-                <ul>
-                    <li>
-                        <a href="https://github.com/MdJahidShah/kali-linux-ethical-hacking-commands/blob/main/01-linux-basics/file-system.md#linux-file-system-basics-for-ethical-hackers" target="_blank">
-                            File System
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/MdJahidShah/kali-linux-ethical-hacking-commands/blob/main/01-linux-basics/permissions.md#linux-file-permissions--ownership-security-critical" target="_blank">
-                            Permissions
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/MdJahidShah/kali-linux-ethical-hacking-commands/blob/main/01-linux-basics/grep-command.md#-grep--basic-theory-put-this-at-the-top-of-grep-commandmd" target="_blank">
-                            Grep Command
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/MdJahidShah/kali-linux-ethical-hacking-commands/blob/main/01-linux-basics/find-vs-grep.md#-find-vs-grep--deep-comparison" target="_blank">
-                            Find vs Grep
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/MdJahidShah/kali-linux-ethical-hacking-commands/blob/main/01-linux-basics/ripgrep.md#-ripgrep-rg--modern-grep-alternative" target="_blank">
-                            Ripgrep (rg)
-                        </a>
-                    </li>
-                </ul>
-            </li>
+                <li>
+                    <a href="https://github.com/MdJahidShah/kali-linux-ethical-hacking-commands/blob/main/2-network-fundamentals.md#2-network-fundamentals" target="_blank">
+                        02-Networking
+                    </a>
+                </li>
 
-            <li>
-                <a href="https://github.com/MdJahidShah/kali-linux-ethical-hacking-commands/blob/main/2-network-fundamentals.md#2-network-fundamentals" target="_blank">
-                    02-Networking
-                </a>
-            </li>
+                <li>
+                    <a href="https://github.com/MdJahidShah/kali-linux-ethical-hacking-commands/blob/main/3-information-gathering.md#3-information-gathering-reconnaissance" target="_blank">
+                        03-Reconnaissance
+                    </a>
+                </li>
 
-            <li>
-                <a href="https://github.com/MdJahidShah/kali-linux-ethical-hacking-commands/blob/main/3-information-gathering.md#3-information-gathering-reconnaissance" target="_blank">
-                    03-Reconnaissance
-                </a>
-            </li>
+                <li>
+                    <a href="https://github.com/MdJahidShah/kali-linux-ethical-hacking-commands/blob/main/4-scanning-and-enumeration.md#4-scanning--enumeration" target="_blank">
+                        04-Scanning
+                    </a>
+                </li>
 
-            <li>
-                <a href="https://github.com/MdJahidShah/kali-linux-ethical-hacking-commands/blob/main/4-scanning-and-enumeration.md#4-scanning--enumeration" target="_blank">
-                    04-Scanning
-                </a>
-            </li>
+                <li>
+                    <a href="https://github.com/MdJahidShah/kali-linux-ethical-hacking-commands/blob/main/5-web-application-testing.md#5-web-application-testing" target="_blank">
+                        05-Web Testing
+                    </a>
+                </li>
 
-            <li>
-                <a href="https://github.com/MdJahidShah/kali-linux-ethical-hacking-commands/blob/main/5-web-application-testing.md#5-web-application-testing" target="_blank">
-                    05-Web Testing
-                </a>
-            </li>
+                <li>
+                    <a href="https://github.com/MdJahidShah/kali-linux-ethical-hacking-commands/blob/main/6-password-and-authentication-testing.md#6-password--authentication-testing" target="_blank">
+                        06-Passwords
+                    </a>
+                </li>
 
-            <li>
-                <a href="https://github.com/MdJahidShah/kali-linux-ethical-hacking-commands/blob/main/6-password-and-authentication-testing.md#6-password--authentication-testing" target="_blank">
-                    06-Passwords
-                </a>
-            </li>
+                <li>
+                    <a href="https://github.com/MdJahidShah/kali-linux-ethical-hacking-commands/blob/main/7-wireless-security.md#7-wireless-security-authorized-only" target="_blank">
+                        07-Wireless
+                    </a>
+                </li>
 
-            <li>
-                <a href="https://github.com/MdJahidShah/kali-linux-ethical-hacking-commands/blob/main/7-wireless-security.md#7-wireless-security-authorized-only" target="_blank">
-                    07-Wireless
-                </a>
-            </li>
+                <li>
+                    <a href="https://github.com/MdJahidShah/kali-linux-ethical-hacking-commands/blob/main/8-exploitation-frameworks.md#8-exploitation-frameworks" target="_blank">
+                        08-Exploitation
+                    </a>
+                </li>
 
-            <li>
-                <a href="https://github.com/MdJahidShah/kali-linux-ethical-hacking-commands/blob/main/8-exploitation-frameworks.md#8-exploitation-frameworks" target="_blank">
-                    08-Exploitation
-                </a>
-            </li>
+                <li>
+                    <a href="https://github.com/MdJahidShah/kali-linux-ethical-hacking-commands/blob/main/9-post-exploitation.md#9-post-exploitation-high-level" target="_blank">
+                        09-Post-exploitation
+                    </a>
+                </li>
 
-            <li>
-                <a href="https://github.com/MdJahidShah/kali-linux-ethical-hacking-commands/blob/main/9-post-exploitation.md#9-post-exploitation-high-level" target="_blank">
-                    09-Post-exploitation
-                </a>
-            </li>
+                <li>
+                    <a href="https://github.com/MdJahidShah/kali-linux-ethical-hacking-commands/blob/main/10-reporting-and-evidence.md#10-reporting--evidence" target="_blank">
+                        10-Reporting
+                    </a>
+                </li>
 
-            <li>
-                <a href="https://github.com/MdJahidShah/kali-linux-ethical-hacking-commands/blob/main/10-reporting-and-evidence.md#10-reporting--evidence" target="_blank">
-                    10-Reporting
-                </a>
-            </li>
+                <li>
+                    <a href="https://github.com/MdJahidShah/kali-linux-ethical-hacking-commands/blob/main/nmap-port-scanning-basics-for-ethical-hackers.md#nmap-port-scanning-basics-for-ethical-hackers" target="_blank">
+                        11-Nmap Basic
+                    </a>
+                </li>
+                <li>
+                    <a href="https://mdjahidshah.github.io/kali-linux-ethical-hacking-commands/docs/what-is-the-osi-reference-model.html" target="_blank" rel="noopener noreferrer">
+                        What Is the OSI Reference Model
+                    </a>
+                </li>
+            </ul>
+        </section>
 
-            <li>
-                <a href="https://github.com/MdJahidShah/kali-linux-ethical-hacking-commands/blob/main/nmap-port-scanning-basics-for-ethical-hackers.md#nmap-port-scanning-basics-for-ethical-hackers" target="_blank">
-                    11-Nmap Basic
-                </a>
-            </li>
-        </ul>
-    </section>
+        <section class="warning">
+            <h2>⚠️ Disclaimer</h2>
+            <p>
+                This repository is intended strictly for educational purposes and authorized
+                security testing. Do not use these tools or techniques on systems you do not own
+                or do not have explicit permission to test.
+            </p>
+        </section>
 
-    <section class="warning">
-        <h2>⚠️ Disclaimer</h2>
-        <p>
-            This repository is intended strictly for educational purposes and authorized
-            security testing. Do not use these tools or techniques on systems you do not own
-            or do not have explicit permission to test.
-        </p>
-    </section>
+        <footer>
+            <p>© 2026 Md Jahid Shah | Ethical Hacking & Cybersecurity</p>
+        </footer>
 
-    <footer>
-        <p>© 2026 Md Jahid Shah | Ethical Hacking & Cybersecurity</p>
-    </footer>
-
-</div>
+    </div>
 
 </body>
 </html>
