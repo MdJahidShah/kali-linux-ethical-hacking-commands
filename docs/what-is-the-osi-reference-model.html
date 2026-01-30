@@ -1,268 +1,268 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Google Verification -->
-    <meta name="google-site-verification" content="UTxFHuoUYF8hWnwcz9oTUnR67fvD3Xpyu_o_zoDhXNQ">
+        <!-- Google Verification -->
+        <meta name="google-site-verification" content="UTxFHuoUYF8hWnwcz9oTUnR67fvD3Xpyu_o_zoDhXNQ">
 
-    <!-- Primary SEO -->
-    <title>What Is the OSI Reference Model | Networking Fundamentals</title>
-    <meta name="description" content="Learn what is the OSI reference model with a clear explanation of all seven layers, data packet flow, and diagrams. A foundational guide for networking, cybersecurity, and ethical hacking.">
-    <meta name="keywords" content="what is the osi reference model, osi model explained, osi layers, networking basics, data packet flow, ethical hacking fundamentals">
-    <meta name="author" content="Md Jahid Shah">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://mdjahidshah.github.io/kali-linux-ethical-hacking-commands/docs/what-is-the-osi-reference-model.html">
+        <!-- Primary SEO -->
+        <title>What Is the OSI Reference Model | Networking Fundamentals</title>
+        <meta name="description" content="Learn what is the OSI reference model with a clear explanation of all seven layers, data packet flow, and diagrams. A foundational guide for networking, cybersecurity, and ethical hacking.">
+        <meta name="keywords" content="what is the osi reference model, osi model explained, osi layers, networking basics, data packet flow, ethical hacking fundamentals">
+        <meta name="author" content="Md Jahid Shah">
+        <meta name="robots" content="index, follow">
+        <link rel="canonical" href="https://mdjahidshah.github.io/kali-linux-ethical-hacking-commands/docs/what-is-the-osi-reference-model.html">
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="What Is the OSI Reference Model – Explained Clearly">
-    <meta property="og:description" content="A practical explanation of the OSI reference model with data packet flow and diagrams for networking and cybersecurity learners.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://mdjahidshah.github.io/kali-linux-ethical-hacking-commands/docs/what-is-the-osi-reference-model.html">
-    <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/7/79/OSI_Application_Layer.svg">
+        <!-- Open Graph -->
+        <meta property="og:title" content="What Is the OSI Reference Model – Explained Clearly">
+        <meta property="og:description" content="A practical explanation of the OSI reference model with data packet flow and diagrams for networking and cybersecurity learners.">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://mdjahidshah.github.io/kali-linux-ethical-hacking-commands/docs/what-is-the-osi-reference-model.html">
+        <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/7/79/OSI_Application_Layer.svg">
 
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="What Is the OSI Reference Model">
-    <meta name="twitter:description" content="Understand the OSI reference model with packet flow and layer-by-layer explanation.">
-    <meta name="twitter:image" content="https://upload.wikimedia.org/wikipedia/commons/7/79/OSI_Application_Layer.svg">
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="What Is the OSI Reference Model">
+        <meta name="twitter:description" content="Understand the OSI reference model with packet flow and layer-by-layer explanation.">
+        <meta name="twitter:image" content="https://upload.wikimedia.org/wikipedia/commons/7/79/OSI_Application_Layer.svg">
 
-    <!-- Icons -->
-    <link rel="icon" type="image/x-icon" href="https://mdjahidshah.github.io/Images/Md_Jahid_Shah.png">
+        <!-- Icons -->
+        <link rel="icon" type="image/x-icon" href="https://mdjahidshah.github.io/Images/Md_Jahid_Shah.png">
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="../style.css">
+        <!-- Styles -->
+        <link rel="stylesheet" href="../style.css">
 
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-        {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "What Is the OSI Reference Model",
-        "author": {
-            "@type": "Person",
-            "name": "Jahid Shah",
-            "url": "https://mdjahidshah.github.io/kali-linux-ethical-hacking-commands/docs/what-is-the-osi-reference-model.html",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/7/79/OSI_Application_Layer.svg"
-        },
-        "publisher": {
-            "@type": "Organization",
-            "name": "Jahid Shah"
-        }
-        }
-    </script>
-</head>
+        <!-- Structured Data -->
+        <script type="application/ld+json">
+            {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "What Is the OSI Reference Model",
+            "author": {
+                "@type": "Person",
+                "name": "Jahid Shah",
+                "url": "https://mdjahidshah.github.io/kali-linux-ethical-hacking-commands/docs/what-is-the-osi-reference-model.html",
+                "image": "https://upload.wikimedia.org/wikipedia/commons/7/79/OSI_Application_Layer.svg"
+            },
+            "publisher": {
+                "@type": "Organization",
+                "name": "Jahid Shah"
+            }
+            }
+        </script>
+    </head>
 
-<body>
-    <header>
-        <nav>
-            <a href="https://mdjahidshah.github.io/kali-linux-ethical-hacking-commands/">🏠 Home</a> |
-            <a href="https://github.com/MdJahidShah/kali-linux-ethical-hacking-commands/blob/main/01-linux-basics/grep-command.md">Grep Command</a> |
-            <a href="https://github.com/MdJahidShah/kali-linux-ethical-hacking-commands/blob/main/nmap-port-scanning-basics-for-ethical-hackers.md#nmap-port-scanning-basics-for-ethical-hackers">Nmap Basics</a> |
-            <a href="https://mdjahidshah.github.io/kali-linux-ethical-hacking-commands/docs/reconnaissance.html">Reconnaissance</a>
-        </nav>
-    </header>
-    <main class="container">
-        <h1>What Is the OSI Reference Model?</h1>
+    <body>
+        <header>
+            <nav>
+                <a href="https://mdjahidshah.github.io/kali-linux-ethical-hacking-commands/">🏠 Home</a> |
+                <a href="https://github.com/MdJahidShah/kali-linux-ethical-hacking-commands/blob/main/01-linux-basics/grep-command.md">Grep Command</a> |
+                <a href="https://github.com/MdJahidShah/kali-linux-ethical-hacking-commands/blob/main/nmap-port-scanning-basics-for-ethical-hackers.md#nmap-port-scanning-basics-for-ethical-hackers">Nmap Basics</a> |
+                <a href="https://mdjahidshah.github.io/kali-linux-ethical-hacking-commands/docs/reconnaissance.html">Reconnaissance</a>
+            </nav>
+        </header>
+        <main class="container">
+            <h1>What Is the OSI Reference Model?</h1>
 
-        <p>
-            <strong>What is the OSI reference model?</strong>  
-            The OSI (Open Systems Interconnection) reference model is a conceptual framework
-            developed by ISO to standardize how data is transmitted between systems over a network.
-            It divides network communication into <strong>seven logical layers</strong>, each with a
-            specific responsibility.
-        </p>
-
-        <p>
-            Instead of focusing on hardware or software vendors, the OSI model focuses on
-            <em>how data moves</em> from one system to another. This makes it a foundational concept
-            in networking, cybersecurity, penetration testing, and troubleshooting.
-        </p>
-
-        <h2>The 7 Layers of the OSI Model</h2>
-
-        <pre>
-            +-----------------------+
-            | 7. Application        |  User interaction (HTTP, FTP, DNS)
-            +-----------------------+
-            | 6. Presentation       |  Encoding, encryption, compression
-            +-----------------------+
-            | 5. Session            |  Session control and management
-            +-----------------------+
-            | 4. Transport          |  End-to-end delivery (TCP/UDP)
-            +-----------------------+
-            | 3. Network            |  Routing and IP addressing
-            +-----------------------+
-            | 2. Data Link          |  MAC addressing & frames
-            +-----------------------+
-            | 1. Physical           |  Bits on the wire (cables, signals)
-            +-----------------------+
-        </pre>
-        <!--Image-->
-        <figure style="text-align: center;background-color: aliceblue;border-radius: 14px;width: fit-content;">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/7/79/OSI_Application_Layer.svg" alt="OSI Model Layers Diagram" style="display: block; margin: auto; max-width: 100%; height: auto;">
-            <figcaption>Image Credit: commons.wikimedia.org</figcaption>
-        </figure>
-
-        <h2>How Data Packets Flow Through the OSI Model</h2>
-
-        <p>
-            When data is sent from a <strong>user’s application</strong> (for example, a web browser),
-            it travels <strong>down the OSI layers</strong> on the sender’s device.
-            Each layer adds its own control information, a process called <em>encapsulation</em>.
-        </p>
-
-        <p>
-            On the receiving device, the data travels <strong>up the OSI layers</strong>.
-            Each layer removes and processes the information added by its counterpart.
-            This reverse process is known as <em>decapsulation</em>.
-        </p>
-
-        <h3>Encapsulation Example</h3>
-
-        <pre>
-            Application Data
-            ↓
-            [Transport Header + Data]
-            ↓
-            [IP Header + Transport + Data]
-            ↓
-            [Frame Header + IP + Transport + Data]
-            ↓
-            [Bits transmitted over media]
-        </pre>
-
-        <section id="osi-model-story">
-            <h2>The Journey of a Website Request</h2>
-
-            <div class="layer">
-                <h3>Layer 7 – Application (The "Interface")</h3>
-                <p>
-                    This is where the human meets the computer. It provides the "doorway" for your apps to access the network.
-                </p>
-                <p>
-                     For example, you are Alex, and you open a web browser and types <em>www.youtube.com</em>. At this layer, the <strong>HTTP</strong> protocol says, "Hey, Alex wants to see this page!". <br><i>It’s like Alex standing at a restaurant counter (which is the browser) and looking at the menu to place an order.</i>
-                </p>
-            </div>
-
-            <div class="layer">
-                <h3>Layer 6 – Presentation (The "Translator & Security")</h3>
-                <p>
-                     This layer, ensures data is in a readable format and is kept private through encryption.
-                </p>
-                <p>
-                     Before the request leaves, this layer makes sure the data is "packed" correctly. Since the website uses <strong>HTTPS</strong>, it encrypts the request so no one can "eavesdrop." It’s like the restaurant taking Alex's order and translating it into a secret kitchen code so only the chef knows what's being cooked.
-                </p>
-            </div>
-
-            <div class="layer">
-                <h3>Layer 5 – Session (The "Connection Manager")</h3>
-                <p>
-                     Session Layer - starts, manages, and stops the "conversation" between two computers.
-                </p>
-                <p>
-                     This layer creates a "handshake" between Alex's computer and the website's server. It keeps the connection open while the video is loading. If Alex’s Wi-Fi briefly drops, the Session Layer tries to keep the "talk" alive so he doesn't have to refresh the whole page. <br><i>It’s like the waiter staying at Alex’s table to make sure he gets everything he ordered before leaving.</i>
-                </p>
-            </div>
-
-            <div class="layer">
-                <h3>Layer 4 – Transport (The "Delivery Guard")</h3>
-                <p>
-                     It decides if data should be sent reliably (TCP) or fast (UDP).
-                </p>
-                <p>
-                     The website data is too big to send in one piece, so this layer breaks it into small **Segments**. Since Alex is watching a video, it uses **TCP** to number each piece (1, 2, 3...). If piece #2 goes missing, this layer asks the server to send it again. <br><i>It’s like the restaurant putting the meal into different boxes and numbering them so Alex knows if a box is missing.</i>
-                </p>
-            </div>
-
-            <div class="layer">
-                <h3>Layer 3 – Network (The "Global GPS")</h3>
-                <p>
-                    It finds the best path across the internet using IP addresses.
-                </p>
-                <p>
-                    This layer puts the "Mailing Address" (which is **IP Address**) on each segment. Now called a **Packet**, it travels through various <strong>Routers</strong> across the world. The routers act like GPS, deciding if the packet should go through a cable in New York or a satellite in London to reach Alex's house. 
-                </p>
-            </div>
-
-            <div class="layer">
-                <h3>Layer 2 – Data Link (The "Local Delivery")</h3>
-                <p>
-                    It moves data between two devices that are physically connected, like your router and your laptop.
-                </p>
-                <p>
-                    Each packet is wrapped in a **Frame** with a <strong>Header</strong> and <strong>Trailer</strong>. The header contains the <strong>MAC Address</strong> of Alex's laptop, ensuring it reaches the correct device on his home network. <br>
-                    Once the packet reaches Alex's home router, this layer uses a <strong>MAC Address</strong> to find Alex’s specific laptop among all the other devices (like his mom's phone or the smart TV). <br><i>It’s like the mail carrier entering Alex's apartment building and looking for the specific mailbox labeled "Alex."</i>
-                </p>
-            </div>
-
-            
-
-            <div class="layer">
-                <h3>Layer 1 – Physical (The "Hardware")</h3>
-                <p> 
-                    This layer is all about the actual physical connection that sends raw bits (1s and 0s) over cables or wireless signals.<br>
-                    The actual physical cables, radio waves, or fiber optics that carry bits.
-                </p>
-                <p>
-                    Finally, the data is turned into <strong>Electrical Pulses</strong> or <strong>Wi-Fi Signals</strong>. These are just 1s and 0s traveling through the air or a wire. It’s like the actual road the delivery truck drives on. Without the road (the cable/signal), the meal (the data) can never reach Alex!
-                </p>
-            </div>
-        </section>
-
-        <section id="osi-cybersecurity">
-            <h2>Why the OSI Model Matters in Cybersecurity</h2>
             <p>
-                In the world of <strong>Ethical Hacking</strong> and <strong>Penetration Testing</strong>, the OSI model acts like a map for a security guard. Instead of guessing where a "burglar" might be, experts use the layers to find exactly where an attack is happening.
+                <strong>What is the OSI reference model?</strong>  
+                The OSI (Open Systems Interconnection) reference model is a conceptual framework
+                developed by ISO to standardize how data is transmitted between systems over a network.
+                It divides network communication into <strong>seven logical layers</strong>, each with a
+                specific responsibility.
             </p>
 
-            <div class="security-example">
-                <h3>Cybersecurity Examples Layer by Layer:</h3>
-                <ul>
-                    <li>
-                        <strong>Layer 7 (Application) – SQL Injection:</strong> 
-                        Imagine a thief tricking a receptionist into giving away a master key. In this attack, a hacker types malicious code into a website’s login box to "trick" the database into showing private user info.
-                    </li>
-                    <li>
-                        <strong>Layer 4 (Transport) – Port Scanning:</strong> 
-                        This is like a burglar walking around a house and wiggling every doorknob to see which one is unlocked. Hackers check different "Ports" (the doors of the computer) to see which ones are open for a connection.
-                    </li>
-                    
-                    <li>
-                        <strong>Layer 3 (Network) – IP Spoofing:</strong> 
-                        Think of this as a prankster wearing a mask and a fake ID to look like someone else. A hacker fakes their <strong>IP Address</strong> to pretend they are a trusted computer so they can get past a security firewall.
-                    </li>
-                    <li>
-                        <strong>Layer 2 (Data Link) – Packet Sniffing:</strong> 
-                        Imagine someone sitting on a telephone pole with a secret device, listening to every conversation in the neighborhood. Hackers "sniff" the data moving through local switches to steal passwords that aren't protected.
-                    </li>
-                </ul>
-            </div>
+            <p>
+                Instead of focusing on hardware or software vendors, the OSI model focuses on
+                <em>how data moves</em> from one system to another. This makes it a foundational concept
+                in networking, cybersecurity, penetration testing, and troubleshooting.
+            </p>
 
-            <blockquote>
-                <strong>The Big Picture:</strong> Understanding the OSI model allows security professionals to analyze attacks <strong>systematically</strong>. Instead of guessing, they can say, "The problem is at Layer 3," and fix the specific "road" the hacker is using.
-            </blockquote>
-            
-            
-        </section>
+            <h2>The 7 Layers of the OSI Model</h2>
 
-        <h2>Conclusion</h2>
+            <pre>
+                +-----------------------+
+                | 7. Application        |  User interaction (HTTP, FTP, DNS)
+                +-----------------------+
+                | 6. Presentation       |  Encoding, encryption, compression
+                +-----------------------+
+                | 5. Session            |  Session control and management
+                +-----------------------+
+                | 4. Transport          |  End-to-end delivery (TCP/UDP)
+                +-----------------------+
+                | 3. Network            |  Routing and IP addressing
+                +-----------------------+
+                | 2. Data Link          |  MAC addressing & frames
+                +-----------------------+
+                | 1. Physical           |  Bits on the wire (cables, signals)
+                +-----------------------+
+            </pre>
+            <!--Image-->
+            <figure style="text-align: center;background-color: aliceblue;border-radius: 14px;width: fit-content;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/79/OSI_Application_Layer.svg" alt="OSI Model Layers Diagram" style="display: block; margin: auto; max-width: 100%; height: auto;">
+                <figcaption>Image Credit: commons.wikimedia.org</figcaption>
+            </figure>
 
-        <p>
-            The OSI reference model is not a protocol but a structured way to understand
-            network communication. By breaking data transmission into seven layers,
-            it simplifies learning, troubleshooting, and securing networks.
-        </p>
+            <h2>How Data Packets Flow Through the OSI Model</h2>
 
-        <p>
-            Whether you are a networking student, penetration tester, or cybersecurity
-            professional, mastering the OSI model is non-negotiable.
-        </p>
+            <p>
+                When data is sent from a <strong>user’s application</strong> (for example, a web browser),
+                it travels <strong>down the OSI layers</strong> on the sender’s device.
+                Each layer adds its own control information, a process called <em>encapsulation</em>.
+            </p>
 
-    </main>
-    <footer>
-        <p>&copy; 2026 Md Jahid Shah | <a href="../index.html">Back to Home</a></p>
-    </footer>
-</body>
+            <p>
+                On the receiving device, the data travels <strong>up the OSI layers</strong>.
+                Each layer removes and processes the information added by its counterpart.
+                This reverse process is known as <em>decapsulation</em>.
+            </p>
+
+            <h3>Encapsulation Example</h3>
+
+            <pre>
+                Application Data
+                ↓
+                [Transport Header + Data]
+                ↓
+                [IP Header + Transport + Data]
+                ↓
+                [Frame Header + IP + Transport + Data]
+                ↓
+                [Bits transmitted over media]
+            </pre>
+
+            <section id="osi-model-story">
+                <h2>The Journey of a Website Request</h2>
+
+                <div class="layer">
+                    <h3>Layer 7 – Application (The "Interface")</h3>
+                    <p>
+                        This is where the human meets the computer. It provides the "doorway" for your apps to access the network.
+                    </p>
+                    <p>
+                        For example, you are Alex, and you open a web browser and types <em>www.youtube.com</em>. At this layer, the <strong>HTTP</strong> protocol says, "Hey, Alex wants to see this page!". <br><i>It’s like Alex standing at a restaurant counter (which is the browser) and looking at the menu to place an order.</i>
+                    </p>
+                </div>
+
+                <div class="layer">
+                    <h3>Layer 6 – Presentation (The "Translator & Security")</h3>
+                    <p>
+                        This layer, ensures data is in a readable format and is kept private through encryption.
+                    </p>
+                    <p>
+                        Before the request leaves, this layer makes sure the data is "packed" correctly. Since the website uses <strong>HTTPS</strong>, it encrypts the request so no one can "eavesdrop." It’s like the restaurant taking Alex's order and translating it into a secret kitchen code so only the chef knows what's being cooked.
+                    </p>
+                </div>
+
+                <div class="layer">
+                    <h3>Layer 5 – Session (The "Connection Manager")</h3>
+                    <p>
+                        Session Layer - starts, manages, and stops the "conversation" between two computers.
+                    </p>
+                    <p>
+                        This layer creates a "handshake" between Alex's computer and the website's server. It keeps the connection open while the video is loading. If Alex’s Wi-Fi briefly drops, the Session Layer tries to keep the "talk" alive so he doesn't have to refresh the whole page. <br><i>It’s like the waiter staying at Alex’s table to make sure he gets everything he ordered before leaving.</i>
+                    </p>
+                </div>
+
+                <div class="layer">
+                    <h3>Layer 4 – Transport (The "Delivery Guard")</h3>
+                    <p>
+                        It decides if data should be sent reliably (TCP) or fast (UDP).
+                    </p>
+                    <p>
+                        The website data is too big to send in one piece, so this layer breaks it into small **Segments**. Since Alex is watching a video, it uses **TCP** to number each piece (1, 2, 3...). If piece #2 goes missing, this layer asks the server to send it again. <br><i>It’s like the restaurant putting the meal into different boxes and numbering them so Alex knows if a box is missing.</i>
+                    </p>
+                </div>
+
+                <div class="layer">
+                    <h3>Layer 3 – Network (The "Global GPS")</h3>
+                    <p>
+                        It finds the best path across the internet using IP addresses.
+                    </p>
+                    <p>
+                        This layer puts the "Mailing Address" (which is **IP Address**) on each segment. Now called a **Packet**, it travels through various <strong>Routers</strong> across the world. The routers act like GPS, deciding if the packet should go through a cable in New York or a satellite in London to reach Alex's house. 
+                    </p>
+                </div>
+
+                <div class="layer">
+                    <h3>Layer 2 – Data Link (The "Local Delivery")</h3>
+                    <p>
+                        It moves data between two devices that are physically connected, like your router and your laptop.
+                    </p>
+                    <p>
+                        Each packet is wrapped in a **Frame** with a <strong>Header</strong> and <strong>Trailer</strong>. The header contains the <strong>MAC Address</strong> of Alex's laptop, ensuring it reaches the correct device on his home network. <br>
+                        Once the packet reaches Alex's home router, this layer uses a <strong>MAC Address</strong> to find Alex’s specific laptop among all the other devices (like his mom's phone or the smart TV). <br><i>It’s like the mail carrier entering Alex's apartment building and looking for the specific mailbox labeled "Alex."</i>
+                    </p>
+                </div>
+
+                
+
+                <div class="layer">
+                    <h3>Layer 1 – Physical (The "Hardware")</h3>
+                    <p> 
+                        This layer is all about the actual physical connection that sends raw bits (1s and 0s) over cables or wireless signals.<br>
+                        The actual physical cables, radio waves, or fiber optics that carry bits.
+                    </p>
+                    <p>
+                        Finally, the data is turned into <strong>Electrical Pulses</strong> or <strong>Wi-Fi Signals</strong>. These are just 1s and 0s traveling through the air or a wire. It’s like the actual road the delivery truck drives on. Without the road (the cable/signal), the meal (the data) can never reach Alex!
+                    </p>
+                </div>
+            </section>
+
+            <section id="osi-cybersecurity">
+                <h2>Why the OSI Model Matters in Cybersecurity</h2>
+                <p>
+                    In the world of <strong>Ethical Hacking</strong> and <strong>Penetration Testing</strong>, the OSI model acts like a map for a security guard. Instead of guessing where a "burglar" might be, experts use the layers to find exactly where an attack is happening.
+                </p>
+
+                <div class="security-example">
+                    <h3>Cybersecurity Examples Layer by Layer:</h3>
+                    <ul>
+                        <li>
+                            <strong>Layer 7 (Application) – SQL Injection:</strong> 
+                            Imagine a thief tricking a receptionist into giving away a master key. In this attack, a hacker types malicious code into a website’s login box to "trick" the database into showing private user info.
+                        </li>
+                        <li>
+                            <strong>Layer 4 (Transport) – Port Scanning:</strong> 
+                            This is like a burglar walking around a house and wiggling every doorknob to see which one is unlocked. Hackers check different "Ports" (the doors of the computer) to see which ones are open for a connection.
+                        </li>
+                        
+                        <li>
+                            <strong>Layer 3 (Network) – IP Spoofing:</strong> 
+                            Think of this as a prankster wearing a mask and a fake ID to look like someone else. A hacker fakes their <strong>IP Address</strong> to pretend they are a trusted computer so they can get past a security firewall.
+                        </li>
+                        <li>
+                            <strong>Layer 2 (Data Link) – Packet Sniffing:</strong> 
+                            Imagine someone sitting on a telephone pole with a secret device, listening to every conversation in the neighborhood. Hackers "sniff" the data moving through local switches to steal passwords that aren't protected.
+                        </li>
+                    </ul>
+                </div>
+
+                <blockquote>
+                    <strong>The Big Picture:</strong> Understanding the OSI model allows security professionals to analyze attacks <strong>systematically</strong>. Instead of guessing, they can say, "The problem is at Layer 3," and fix the specific "road" the hacker is using.
+                </blockquote>
+                
+                
+            </section>
+
+            <h2>Conclusion</h2>
+
+            <p>
+                The OSI reference model is not a protocol but a structured way to understand
+                network communication. By breaking data transmission into seven layers,
+                it simplifies learning, troubleshooting, and securing networks.
+            </p>
+
+            <p>
+                Whether you are a networking student, penetration tester, or cybersecurity
+                professional, mastering the OSI model is non-negotiable.
+            </p>
+
+        </main>
+        <footer>
+            <p>&copy; 2026 Md Jahid Shah | <a href="../index.html">Back to Home</a></p>
+        </footer>
+    </body>
 </html>
