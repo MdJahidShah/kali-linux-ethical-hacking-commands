@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="google-site-verification" content="UTxFHuoUYF8hWnwcz9oTUnR67fvD3Xpyu_o_zoDhXNQ">
+
+        <title>Nmap Port Scanning Guide | Ethical Hacking Fundamentals</title>
+        <meta name="description" content="Master Nmap port scanning for ethical hacking. Learn stealth scans, service version detection, and vulnerability research with practical examples from Md Jahid Shah.">
+        <meta name="keywords" content="Nmap tutorial, port scanning basics, ethical hacking, network security, SYN scan, service detection, cybersecurity lab">
+        <meta name="author" content="Md Jahid Shah">
+        <meta name="robots" content="index, follow">
+        <link rel="canonical" href="https://mdjahidshah.github.io/kali-linux-ethical-hacking-commands/docs/nmap-port-scanning-basics.html">
+
+        <meta property="og:title" content="Nmap Port Scanning Basics – Professional Guide">
+        <meta property="og:description" content="A hands-on guide to Nmap scanning techniques, IP addressing, and service discovery for pentesters.">
+        <meta property="og:type" content="article">
+        <meta property="og:url" content="https://mdjahidshah.github.io/kali-linux-ethical-hacking-commands/docs/nmap-port-scanning-basics.html">
+        <meta property="og:image" content="https://mdjahidshah.github.io/Images/Md_Jahid_Shah.png">
+
+        <link rel="icon" type="image/x-icon" href="https://mdjahidshah.github.io/Images/Md_Jahid_Shah.png">
+
+        <link rel="stylesheet" href="../style.css">
+
+        <script type="application/ld+json">
+            {
+            "@context": "https://schema.org",
+            "@type": "TechArticle",
+            "headline": "Nmap Port Scanning Basics (For Ethical Hackers)",
+            "author": {
+                "@type": "Person",
+                "name": "Md Jahid Shah",
+                "url": "https://jahidshah.com"
+            },
+            "publisher": {
+                "@type": "Organization",
+                "name": "Jahid Shah",
+                "image": "https://mdjahidshah.github.io/Images/Md_Jahid_Shah.png",
+                "url": "https://github.com/MdJahidShah/kali-linux-ethical-hacking-commands/docs/nmap-port-scanning-basics-for-ethical-hackers.html"
+            },
+            "description": "Comprehensive guide on using Nmap for network reconnaissance and vulnerability assessment."
+            }
+        </script>
+    </head>
+    <body>
+
+        <header>
+            <nav>
+                <a href="https://mdjahidshah.github.io/kali-linux-ethical-hacking-commands/">🏠 Home</a> |
+                <a href="https://github.com/MdJahidShah/kali-linux-ethical-hacking-commands/blob/main/01-linux-basics/grep-command.md">Grep Command</a> |
+                <a href="https://github.com/MdJahidShah/kali-linux-ethical-hacking-commands/blob/main/nmap-port-scanning-basics-for-ethical-hackers.md#nmap-port-scanning-basics-for-ethical-hackers">Nmap Basics</a> |
+                <a href="https://mdjahidshah.github.io/kali-linux-ethical-hacking-commands/docs/reconnaissance.html">Reconnaissance</a>
+            </nav>
+            <h1>Nmap Port Scanning Basics (For Ethical Hackers)</h1>
+        </header>
+
+        <main class="container">
+            <section>
+                <p>Nmap (Network Mapper) is the <strong>essential reconnaissance tool</strong> in any ethical hacker’s arsenal. Before attempting an exploitation, you must map the landscape: identifying what hosts are alive, which ports are reachable, and what services are vulnerable. In this post we will cover nmap port scanning basics for ethical hackers and 
+                     included the fundamentals of Nmap port scanning, focusing on techniques and strategies used by professional penetration testers.
+                </p>
+                <blockquote><strong>Pro Tip:</strong> No ports → no services → no attack surface. Recognition is 90% of a successful penetration test.</blockquote>
+            </section>
+            <section>
+                <Strong>Table of Content:</Strong>
+                <ul>
+                    <li>
+                        <a href="#masternmap">What You Need to Learn to Master Nmap</a>
+                    </li>
+                    <li>
+                        <a href="#ipaddress">Understanding IP Addresses: The Pentester’s Map</a>
+                    </li>
+                    <li>
+                        <a href="#portsandservice">Understanding Ports & Protocols</a>
+                    </li>
+                    <li>
+                        <a href="#nmapscantechniq">Nmap Scanning Techniques</a>
+                    </li>
+                    <li>
+                        <a href="#advancecheck">Advanced: Automating Vulnerability Checks</a>   
+                    </li>
+                    <li>
+                        <a href="#workflow">🧠 Professional Pentester Workflow</a>
+                    </li>
+                    <li>
+                        <a href="#usefulresources">🔗 Useful Resources</a>
+                    </li>
+                </ul>
+            </section>
+            <section id="masternmap">
+                <h2>What You Need to Learn to Master Nmap</h2>
+                <p>Before firing up Nmap, you must understand the underlying mechanics of the network. Without these foundations, you are just running commands without understanding the <strong>digital handshake</strong> occurring behind the scenes.</p>
+
+                <div class="learning-path">
+                    <h3><a href="https://mdjahidshah.github.io/kali-linux-ethical-hacking-commands/docs/what-is-the-osi-reference-model.html" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">1. The TCP/IP Model & OSI Layers</a></h3>
+                    <p>Nmap operates primarily at the <strong>Transport (Layer 4)</strong> and <strong>Network (Layer 3)</strong> layers. You must understand how data is encapsulated and how protocols like TCP, UDP, and ICMP function to interpret scan results correctly.</p>
+                    
+                    
+                    
+                    <h3>2. TCP Three-Way Handshake</h3>
+                    <p>This is the most critical concept for Nmap users. Most Nmap scan types (like <code>-sS</code> or <code>-sT</code>) manipulate this handshake to determine port states.</p>
+                    <ul>
+                        <li><strong>SYN:</strong> "Are you there?"</li>
+                        <li><strong>SYN/ACK:</strong> "Yes, I am here and ready to connect."</li>
+                        <li><strong>ACK:</strong> "Great, let's talk."</li>
+                    </ul>
+                    <p><em>Pentester Note:</em> Stealth scans intentionally break this handshake after the SYN/ACK to avoid being logged by the application layer.</p>
+
+                    
+
+                    <h3>3. Subnetting & CIDR Notation</h3>
+                    <p>Professional engagements often require scanning entire networks rather than single IPs. You must be comfortable with <strong>CIDR notation</strong> (e.g., <code>192.168.1.0/24</code>) to target the correct range efficiently without wasting time on empty addresses.</p>
+
+                    <h3>4. Command Line Interface (CLI) Proficiency</h3>
+                    <p>While Nmap has a GUI (Zenmap), professional ethical hackers work almost exclusively in the <strong>Linux Terminal</strong>. You should be familiar with:</p>
+                    <ul>
+                        <li><strong>Grep/Awk/Sed:</strong> To filter large Nmap output files.</li>
+                        <li><strong>Output Redirection:</strong> Saving scans in <code>-oN</code> (Normal) or <code>-oX</code> (XML) formats for reporting.</li>
+                        <li><strong>Sudo privileges:</strong> Understanding why raw socket scans (like SYN scans) require root access.</li>
+                    </ul>
+                </div>
+
+                <div class="knowledge-check">
+                    <h3>Prerequisite Checklist</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Skillset</th>
+                                <th>Why it matters for Nmap</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Networking Basics</strong></td>
+                                <td>Understanding <a href="#ipaddress">IPs</a> and <a href="#portsandservice">Port vs. Service vs. Protocol.</a></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Linux Fundamentals</strong></td>
+                                <td>Installing Nmap, managing permissions, and script execution.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Packet Analysis</strong></td>
+                                <td>Using Wireshark alongside Nmap to see what a scan actually looks like on the wire.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Ethics & Legalities</strong></td>
+                                <td>Knowing the difference between a local lab scan and an illegal external scan.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="ipaddress">
+                <h2>Understanding IP Addresses: The Pentester’s Map</h2>
+                <p>In the realm of networking, an IP address is a digital identifier. For an ethical hacker, however, an IP is more than just a label—it is a roadmap to a potential entry point. Mastering the nuances between different IP types is critical for effective reconnaissance.</p>
+
+                
+
+                <h3>1. Public IP: The Front Door</h3>
+                <p>
+                    A <strong>Public IP</strong> is globally unique and reachable from anywhere on the internet. These are the primary targets during <strong>External Perimeter Assessments</strong>. If a service is misconfigured on a public IP, the entire world can see it.
+                </p>
+                <ul>
+                    <li><strong>Routability:</strong> Accessible across the global web.</li>
+                    <li><strong>Assignment:</strong> Managed by IANA and distributed by ISPs.</li>
+                    <li><strong>Pentester Strategy:</strong> We scan these to identify "low-hanging fruit" such as exposed databases or unpatched web servers.</li>
+                </ul>
+                <p><em>Real-world Example:</em> When performing a bug bounty on a corporate domain, you are primarily interacting with their public-facing IP infrastructure.</p>
+
+                <h3>2. Private IP: The Internal Corridor</h3>
+                <p>
+                    <strong>Private IPs</strong> are utilized within local networks (LANs) and are not directly accessible from the internet. In a professional engagement, once a pentester gains a foothold in a network, they use these addresses for <strong>Lateral Movement</strong>.
+                </p>
+                <ul>
+                    <li><strong>Routability:</strong> Restricted to internal hardware; requires NAT (Network Address Translation) to reach the internet.</li>
+                    <li><strong>Common Ranges:</strong> 10.0.0.0/8, 172.16.0.0/12, and 192.168.0.0/16.</li>
+                    <li><strong>Pentester Strategy:</strong> We use these to discover internal file shares, domain controllers, and IoT devices that the company assumed were "hidden" from the outside.</li>
+                </ul>
+
+                <h3>3. Static vs. Dynamic: Stability and Persistence</h3>
+                <p>
+                    The method by which an IP is assigned significantly impacts how a pentester maintains persistence and tracks a target.
+                </p>
+
+                <div class="comparison-grid">
+                    <h4>Static IP (The Fixed Target)</h4>
+                    <p>Manually configured and permanent. Usually reserved for critical infrastructure like <strong>Web Servers</strong> and <strong>Firewalls</strong>. 
+                    <br><em>Security Note:</em> Because they never change, they are easier to target over long-term engagements.</p>
+
+                    
+
+                    <h4>Dynamic IP (The Moving Target)</h4>
+                    <p>Leased temporarily via <strong>DHCP</strong>. Common for workstations and mobile devices. 
+                    <br><em>Security Note:</em> A dynamic IP can complicate a pentest; if the lease expires during an active scan, the target "disappears" or changes identity, requiring fresh discovery.</p>
+                </div>
+
+                <h3>At-a-Glance Reference</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>IP Classification</th>
+                            <th>Network Scope</th>
+                            <th>Pentesting Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Public</strong></td>
+                            <td>Global Internet</td>
+                            <td>External Attack Surface Discovery</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Private</strong></td>
+                            <td>Local Area Network</td>
+                            <td>Internal Pivoting & Lateral Movement</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Static</strong></td>
+                            <td>Fixed/Permanent</td>
+                            <td>Long-term Target Tracking</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Dynamic</strong></td>
+                            <td>Temporary/Leased</td>
+                            <td>Requires Frequent Re-Reconnaissance</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section id="portsandservice">
+                <h2>Understanding Ports & Protocols</h2>
+                <p>A <strong>port</strong> is a logical communication endpoint. Think of the IP as the building address and the Port as the specific door leading to a room.</p>
+                
+                <ul>
+                    <li><strong>Range:</strong> 0 – 65,535</li>
+                    <li><strong>Well-Known Ports (0–1023):</strong> Reserved for core services like HTTP (80) or SSH (22).</li>
+                    <li><strong>Registered Ports (1024–49151):</strong> Used by specific vendors (e.g., MySQL 3306).</li>
+                </ul>
+
+                <h3>Common Pentesting Targets</h3>
+                <table>
+                    <tr><th>Protocol</th><th>Port</th><th>Pentester Focus</th></tr>
+                    <tr><td>FTP</td><td>21</td><td>Check for Anonymous login.</td></tr>
+                    <tr><td>SSH</td><td>22</td><td>Brute-force or private key leaks.</td></tr>
+                    <tr><td>DNS</td><td>53</td><td>Zone transfers (AXFR).</td></tr>
+                    <tr><td>HTTP/S</td><td>80/443</td><td>Web vulnerabilities (SQLi, XSS).</td></tr>
+                    <tr><td>SMB</td><td>445</td><td>EternalBlue / File share leaks.</td></tr>
+                </table>
+            </section>
+
+            <section id="nmapscantechniq">
+                <h2>Nmap Scanning Techniques</h2>
+
+                <h3>1. Basic Target Discovery</h3>
+                <p>To scan specific ports on a target:</p>
+                <pre><code>nmap -p 22,80,443 192.168.1.10</code></pre>
+
+                <h3>2. Stealth Scanning (SYN Scan)</h3>
+                <p>The <code>-sS</code> flag is the "Gold Standard." It sends a SYN packet but never completes the <strong>TCP Three-Way Handshake</strong>, meaning the connection is never fully established, often bypassing simple logging.</p>
+                
+                <pre><code>sudo nmap -sS IP_ADDRESS</code></pre>
+                <ul>
+                    <li><strong>Speed:</strong> Extremely fast as it doesn't wait for full connections.</li>
+                    <li><strong>Stealth:</strong> Harder for legacy firewalls to log as a "connection."</li>
+                </ul>
+
+                <h3>3. Service Version Detection</h3>
+                <p>Identifying the software version is crucial because exploits are version-specific.</p>
+                <pre><code>nmap -sV IP_ADDRESS</code></pre>
+                <p><em>Example Output:</em> Instead of just "Port 80 Open," Nmap will report "Apache httpd 2.4.41."</p>
+
+                <h3>4. Full Port Sweep</h3>
+                <p>By default, Nmap only scans the top 1,000 most common ports. To find hidden services (like a backdoor on port 1337), you must scan all 65,535 ports.</p>
+                <pre><code>nmap -p- IP_ADDRESS</code></pre>
+            </section>
+
+            <section id="advancecheck">
+                <h2>Advanced: Automating Vulnerability Checks</h2>
+                <p>The Nmap Scripting Engine (NSE) allows you to automate vulnerability detection.</p>
+                <pre><code>nmap --script vuln IP_ADDRESS</code></pre>
+                <p><strong>Warning:</strong> This script can be "noisy" and might trigger Intrusion Detection Systems (IDS). Use it wisely during the assessment phase.</p>
+            </section>
+
+            <section class="notes" id="workflow">
+                <h2>🧠 Professional Pentester Workflow</h2>
+                <ol>
+                    <li><strong>Passive Recon:</strong> Find the IP without touching the server.</li>
+                    <li><strong>Active Recon:</strong> Use <code>nmap -sS -sV -O</code> to find the OS and services.</li>
+                    <li><strong>Analysis:</strong> Cross-reference versions with <em>Exploit-DB</em> or <code>searchsploit</code>.</li>
+                    <li><strong>Verification:</strong> Use specialized tools like <code>nikto</code> for web or <code>enum4linux</code> for SMB.</li>
+                </ol>
+            </section>
+
+            <section id="usefulresources">
+                <h2>🔗 Useful Resources</h2>
+                <ul>
+                    <li><a href="https://nmap.org/book/man.html">Official Nmap Documentation</a></li>
+                    <li><a href="https://exploit-db.com">Exploit Database</a></li>
+                    <li><a href="https://github.com/MdJahidShah/jsosint">JSOSINT - Automated OSINT Tool (Website Scanner)</a></li>
+                </ul>
+            </section>
+
+            <footer>
+                <p class="warning">⚠️ <strong>Legal Warning:</strong> Only scan systems you own or have explicit written permission to test. Unauthorized scanning is a criminal offense.</p>
+                <a href="https://mdjahidshah.github.io/kali-linux-ethical-hacking-commands/">⬅ Return Home</a>
+            </footer>
+        </main>
+
+    </body>
+</html>
